@@ -210,14 +210,21 @@ Cart
   border-radius: var(--radius);
 }
 .clear-btn:hover {
-  background: var(--clr-red-light);
-  color: var(--clr-red-dark);
-  border-color: var(--clr-red-light);
+  background: var(--clr-primary);
+  color: var(--clr-grey-10);
+  border-color: var(--clr-primary);
 }
 .confirm-btn {
   border-color: var(--clr-primary);
   color: var(--clr-primary);
 }
+
+.confirm-btn:hover {
+  background: var(--clr-red-light);
+  color: var(--clr-red-dark);
+  border-color: var(--clr-red-light);
+}
+
 /*
 =============== 
 Cart Item
@@ -229,6 +236,9 @@ Cart Item
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
+  border: solid 2px var(--clr-primary);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .cart-item img {
   width: 5rem;
@@ -236,7 +246,7 @@ Cart Item
   object-fit: cover;
 }
 .cart-item h4 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-weight: 500;
   letter-spacing: 2px;
 }
@@ -286,11 +296,12 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background: url('../img/cart-item/pngegg.png'); */
 }
 
 .modal {
