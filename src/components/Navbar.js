@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <nav>
         <div className="nav-center">
-          <h3>Learning Redux</h3>
+          <h3>| Roy | BN |</h3>
           <div className="nav-container">
             <CartIcon />
             <div className="amount-container">
