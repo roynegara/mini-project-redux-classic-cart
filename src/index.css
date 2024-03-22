@@ -28,7 +28,7 @@
 }
 body {
   background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-10);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -122,14 +122,14 @@ Navbar
 }
 
 .loading h1 {
-  animation: upDown 2s infinite alternate;
+  animation: upDown 0.7s infinite alternate;
 }
 @keyframes upDown {
   0% {
-    transform: translateY(0); /* Mulai dari posisi normal */
+    transform: translateX(-100px); /* Mulai dari posisi normal */
   }
   100% {
-    transform: translateY(100px); /* Pindahkan ke bawah */
+    transform: translateX(100px); /* Pindahkan ke bawah */
   }
 }
 
@@ -184,14 +184,20 @@ Cart
   min-height: calc(100vh - 120px);
   width: 90vw;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 15px;
   padding: 2.5rem 0;
   max-width: var(--fixed-width);
+  background: url("../img/cart-item/41460.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--radius);
+  position: relative;
 }
 .cart h2 {
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 .empty-cart {
   text-transform: lowercase;
@@ -233,8 +239,9 @@ Cart
 }
 
 .confirm-btn:hover {
-  background: var(--clr-red-light);
-  color: var(--clr-red-dark);
+  background: var(--clr-red-dark);
+  /* color: var(--clr-red-dark); */
+  color: var(--clr-grey-10);
   border-color: var(--clr-red-light);
 }
 
@@ -248,10 +255,12 @@ Cart Item
   align-items: center;
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 1.5rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem 1.5rem;
   border: solid 2px var(--clr-primary);
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0, 0.2);
 }
 .cart-item img {
   width: 5rem;
@@ -265,20 +274,24 @@ Cart Item
   letter-spacing: 2px;
 }
 .item-price {
-  color: var(--clr-grey-5);
+  color: #c1c1c2;
 }
 .remove-btn {
   color: var(--clr-primary);
   letter-spacing: var(--spacing);
   cursor: pointer;
   font-size: 0.9rem;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.6);  
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
   border: none;
   margin-top: 0.375rem;
   transition: var(--transition);
+  font-weight: 600;
 }
 .remove-btn:hover {
   color: var(--clr-primary-light);
+  font-weight: 600;
 }
 .amount-btn {
   width: 24px;
@@ -319,7 +332,7 @@ hr {
 }
 
 .modal {
-  background: var(--clr-white);
+  background: rgb(190, 190, 190);
   width: 80vw;
   max-width: 400px;
   border-radius: var(--radius);
@@ -337,4 +350,48 @@ hr {
 .btn-container {
   display: flex;
   justify-content: space-around;
+}
+
+header {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: var(--clr-grey-10);
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 1.5rem;
+  padding: 20px;
+}
+footer {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 1.5rem 1.5rem;
+}
+
+.footer-btn {  
+    background: var(--clr-primary);
+    color: var(--clr-grey-10);
+    border-color: var(--clr-primary);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-top: 1.5rem;
+}
+
+.footer-btn:hover {
+    background: var(--clr-red-dark);
+    color: var(--clr-grey-10);
+    border-color: var(--clr-red-light);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-top: 1.5rem;
+    
+}
+
+
+.popup {
+  color: #102a42;
 }

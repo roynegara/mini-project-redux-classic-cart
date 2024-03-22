@@ -8,7 +8,7 @@ const Modal = () => {
   return (
     <aside className="modal-container" onClick={() => {dispatch(closeModal())}}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <h4>remove all items from your shopping cart?</h4>
+        <h4 className='popup'>remove all items from your shopping cart?</h4>
         <div className="btn-container">
           <button type="button" className="btn confirm-btn" onClick={() => { dispatch(clearCart()); dispatch(closeModal()) }}>
             confirm
